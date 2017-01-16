@@ -1,0 +1,16 @@
+<% include header.ejs %>
+<h2>Write a new entry</h2>
+<form method="post" role="form">
+	<div class="form-group">
+		<label for="title">Title</label>
+		<input type='text' class="form-control" id="title" name="title" placeholder="Love Express!" required>
+	</div>
+	<div class="form-group">
+		<label for="content">Content</label>
+		<textarea class="form-control" id="content" name="content" row="3" required="true" placeholder="Write your entry here!"></textarea>
+	</div>
+	<div class="form-group">
+		<input type="submit" value="Post Entry" class="btn btn-primary">
+	</div>
+</form>
+<% include footer.ejs %>
