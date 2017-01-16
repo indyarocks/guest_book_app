@@ -4,10 +4,8 @@ var logger = require("morgan");
 var path = require("path");
 var bodyParser = require("body-parser");
 
-app.set('port', (process.env.PORT || 3000));
-
 var app = express();
-
+var port = (process.env.PORT || 3000)
 app.set("views", path.resolve(__dirname, "views"));
 app.set("view engine", "ejs");
 
@@ -43,6 +41,6 @@ app.use(function(req, res){
 	res.render("404");
 });
 
-http.createServer(app).listen(app.get('port'), function(){
+http.createServer(app).listen(port, function(){
 	console.log("Started server on port: 3000");
 })
